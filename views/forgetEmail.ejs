@@ -1,0 +1,51 @@
+<%- include("./partials/header") %>
+<div class="w-full h-screen bg-white-100">
+
+    <div class="flex w-full h-screen ">
+
+        <div class="w-[40vw] h-full relative flex flex-col items-center overflow-hidden pl-[3%] pt-[3%] ">
+            <div id="left_login_circle1" class="absolute rounded-full  w-[35%] h-[25%] border-[40px] border-[#d4e8f3]">    
+            </div>
+            <div id="l2" class="absolute rounded-full  w-[35%] h-[25%] border-[40px] border-[#d4e8f3]">    
+            </div>
+            <div id="l3" class="absolute rounded-full  w-[35%] h-[25%] border-[40px] border-[#d4e8f3] overflow-hidden">    
+            </div>
+
+            <div class="heading mt-[30%] text-5xl ml-10 font-bold text-[] z-5 border-b-2 border-indigo-500"><span class="text-[#2784bb] ">C</span>onnectSphere</div>
+
+            <br><br><br>
+
+            <div class="flex w-[35%] flex-col justify-between items">
+              <h1 class="text-2xl ">Find your Account and Reset your Account</h1><br>
+              <form class="flex flex-col justify-between" action="/forgetEmail" method="post">
+
+                <div class="flex justify-between">
+                  <p>Enter your registered Email below</p>
+                </div>
+
+                <input type="email" name="email" required="" class="block px-2 mt-2  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><br>
+                
+                <button class="bg-blue-500 py-2 px-3 rounded-md hover:bg-blue-400 font-semibold" type="submit">Find you Account</button>
+
+                <a href="/login" class="mx-auto mt-5 font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Know your Account Password ?</a>
+              </form>
+            </div>
+
+            
+
+        </div>
+
+
+        <div class="w-[60vw] relative flex justify-center items-center h-screen overflow-hidden ">
+            <div id="login-circle" class="circle absolute rounded-full w-[90%] h-[90%] bg-[#b2d5e8]"></div>
+            <div id="login-circle2" class="circle absolute rounded-full w-[90%] h-[90%] bg-[#b2d5e8]"></div>
+            <div id="login-circle3" class="circle absolute rounded-full w-[50%] h-[30%] bg-[#9ac9e1]"></div>
+            <img class=" w-[100%] h-[81%] my-[10vh] p-[7%] rounded-[5vw]" src="https://en.idei.club/uploads/posts/2023-06/1686488013_en-idei-club-p-designer-cartoon-dizain-pinterest-31.jpg" alt="">
+            <img class="absolute opacity-75 w-[11%] h-[12%] right-[12%] top-[20%] z-2" src="https://www.3dart.it/wp-content/uploads/2020/08/icon_bookmark.png" alt="">
+            <img class="w-[10%] opacity-75 h-[12%] left-[12%] top-[25%] absolute" src="/images/pen_edit_modify_pencil_icon_181536.png" alt="">
+        </div>
+    </div>
+
+
+</div>
+<%- include("./partials/footer") %>

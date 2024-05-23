@@ -1,0 +1,77 @@
+<%- include("./partials/header") %>
+
+
+<div class="bg-zinc-800 flex  justify-between ">
+
+    <div class="left w-[20vw] bg-zinc-900 h-screen flex flex-col justify border-r-2 border-zinc-600 pl-[3%] pt-[2%] text-white">
+        <h1 class="text-2xl " >SphereConnect</h1>
+        <br><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2 " href="/"><img class="w-[1.2vw] h-[1.2vw]" src="/images/home-line.png" alt="">Home</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.2vw] h-[1.2vw]" src="/images/search-2-line.png" alt="">Search</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.2vw] h-[1.2vw]" src="/images/ie-line.png" alt="">Explore</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.2vw] h-[1.2vw]" src="/images/icons8-reels-50.png" alt="">Reels</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.1vw] h-[1.1vw]" src="/images/icons8-facebook-messenger-50.png" alt="">Messages</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.2vw] h-[1.2vw]" src="/images/icons8-love-24.png" alt="">Notification</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.2vw] h-[1.2vw]" src="/images/icons8-create-50.png" alt="">Create</a><br>
+        <a class="flex items-center gap-2 transition-transform hover:translate-x-2" href="/"><img class="w-[1.2vw] h-[1.2vw] rounded-full border-2 border-white" src="/images/profileImages/<%= user.profileImage %>" alt="">Profile</a>
+    </div>
+
+    <div class="w-[80vw] h-screen ">
+        <div class="w-full h-screen text-white bg-zinc-900 pt-1">
+        
+            <form hidden  id="uploadForm" action="/fileupload/<%= user._id %>" method="post" enctype="multipart/form-data">
+                <input type="file" name="profileImage">       
+            </form>
+        
+            <div class="profile border-b border-zinc-400 py-10 flex w-[50%] mx-auto relative">
+               
+                <div class="relative profile-head w-40 h-40 bg-zinc-100 rounded-full m-[5vh]  bg-center bg-cover">
+
+                     <img class="w-full h-full bg-cover bg-contain rounded-full bg-center" src="/images/profileImages/<%= user.profileImage %>" alt="">
+        
+                    <div id="uploadDp" class="absolute pencil w-10 h-10 bottom-0 right-0 flex justify-center items-center rounded-full bg-zinc-400">
+                        <i  class="text-zinc-800 ri-pencil-fill"></i>
+                    </div>
+        
+                </div>
+                <div class="w-[60%] ml-10 my-[7vh] flex flex-col gap-1">
+                    <div class="flex gap-2">
+                        <div class="username  text-lg mt-3"><%= user.username %></div>
+                    <a href="/edit/_id" class="w-max h-max flex text-center  text-md bg-zinc-600 px-3 py-2 rounded-md mt-2">Edit Profile</a>
+                    <a href=""><img class="w-7 h-7 mt-3" src="/images/settings-line.png" alt=""></a>
+                    <!-- <a href="/addnewpost" class="w-max h-max  text-center text-sm bg-red-600 px-7 py-2 rounded-md mt-3 ">Add new post</a> -->
+                </div>
+                <div class="fullname text-xl mt-3"><%= user.name %></div>
+                    </div>
+                
+            </div>
+        
+                <div class="cards flex flex-wrap gap-10 px-10 mt-[7%] mx-[10%]">
+                    <div class="card">
+                       <div class="w-72 h-80 bg-zinc-200 rounded-lg bg-cover bg-top">
+                        <img src="" alt="">
+            
+                        
+                       </div>
+            
+                    </div>
+                   
+                </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.querySelector("#uploadDp").addEventListener("click",function(){
+        document.querySelector("#uploadForm input").click();
+    })
+
+    document.querySelector("#uploadForm input").addEventListener("change",function(){
+        document.querySelector("#uploadForm").submit();
+     
+    })
+</script>
+
+<%- include("./partials/footer") %>

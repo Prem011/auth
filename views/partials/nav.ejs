@@ -1,0 +1,13 @@
+<nav class="flex py-3 justify-center gap-10 fs text-base font-semibold  text-blue-700">
+
+    <% if(user){ %>
+        <a href="/profile">Home</a>
+        <a href="/logout">Logout</a>
+        
+    <% }else{ %>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+
+    <% } %>
+    <a href="/about">About</a>
+</nav>

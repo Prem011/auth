@@ -1,0 +1,58 @@
+<%- include("./partials/header") %>
+<div class="w-full h-screen bg-white-100">
+
+    <div class="flex w-full h-screen ">
+
+
+        <div class="w-[40vw] h-full relative flex flex-col items-center overflow-hidden pl-[3%] pt-[3%] ">
+            <div id="leftLogin-circle1" class="circle absolute rounded-full w-[100%] h-[70%] bg-[#81a2d1]"></div>
+
+            <div id="left_login_circle1" class="absolute rounded-full  w-[35%] h-[25%] border-[40px] border-[#d4e8f3]">    
+            </div>
+            <div id="l2" class="absolute rounded-full  w-[35%] h-[25%] border-[40px] border-[#233370]">    
+            </div>
+            <div id="l3" class="absolute rounded-full  w-[35%] h-[25%] border-[40px] border-[#233370] overflow-hidden">    
+            </div>
+
+            <div class="heading mt-[30%] mb-5 text-5xl ml-10 font-bold text-[] z-5 border-b-2 border-indigo-500"><span class="text-[#2784bb] ">C</span>onnectSphere</div>
+
+            <br>
+
+            <div class="flex w-[35%] flex-col justify-between items">
+              <h1 class="text-2xl ">Register</h1><br>
+              <form class="flex flex-col justify-between" action="/register" method="post">
+                Username 
+                <input type="text" name="username" required="" class="block px-2 mt-2  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><br>
+                Email 
+                <input type="email" name="email" required="" class="block px-2 mt-2  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><br>
+                Full name 
+                <input type="text" name="name" required="" class="block px-2 mt-2  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><br>
+
+                <p>Password</p>
+
+                <input type="password" name="password" required="" class="block px-2 mt-2  w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"><br>
+                
+                <button class="bg-blue-500 py-2 px-3 rounded-md hover:bg-blue-400 font-semibold" type="submit">Register</button>
+
+                <a href="/login" class="mx-auto mt-5 font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Existing user ?</a>
+              </form>
+            </div>
+
+            
+
+        </div>
+
+        <div class="w-[60vw] relative flex justify-center items-center h-screen overflow-hidden ">
+            <div id="login-circle" class="circle absolute rounded-full w-[90%] h-[90%] bg-[#2d4380]"></div>
+            <div id="login-circle2" class="circle absolute rounded-full w-[90%] h-[90%] bg-[#81a2d1]"></div>
+            <div id="login-circle3" class="circle absolute rounded-full w-[50%] h-[30%] bg-[#5977b1]"></div>
+            <img class=" w-[100%] h-[89%] my-[10vh] p-[7%] rounded-[5vw]" src="https://img.freepik.com/free-photo/abstract-3d-creation-made-from-geometric-shapes_23-2150829321.jpg?t=st=1715258676~exp=1715262276~hmac=f21086ae111547ce0c0299058a52dfa1e505ea3349f74653b544eee36cab01d5&w=900" alt="">
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<%- include("./partials/footer") %>
